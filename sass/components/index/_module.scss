@@ -1,13 +1,11 @@
-@import './header';
-@import './logo';
+@import '../common/header/header';
+@import '../common/logo';
 @import './hero';
 @import './modal/modal';
 @import './feature';
 @import './title';
 @import './what';
 @import './team';
-@import './social';
+@import '../common/social';
 @import './clients';
-@import './footer/footer';
-@import './filter';
-@import './portfolio';
+@import '../common/footer/footer';
