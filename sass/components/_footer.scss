@@ -1,0 +1,88 @@
+/* стили футера */
+.footer {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 0;
+  background-color: $footer-backgorund-color;
+}
+.footer-text {
+  color: $hero-text-color;
+  font-style: normal;
+}
+.address {
+  margin-top: 20px;
+}
+.footer-link {
+  margin-top: 9px;
+  color: $footer-link-color;
+  font-style: normal;
+  transition: color 250ms $animation-cubic;
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: $accent-color;
+}
+/* секция присоединяйтесь */
+.join {
+  margin-left: 70px;
+  margin-right: 93px;
+  padding-top: 12px;
+  color: $hero-text-color;
+}
+.footer-title {
+  margin-bottom: 20px;
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.join-item {
+  color: $hero-text-color;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* секция подпишитесь */
+.subscribe {
+  padding-top: 12px;
+  width: 570px;
+  color: $hero-text-color;
+}
+.subscribe-form {
+  display: flex;
+}
+.subscribe-input {
+  margin-right: 12px;
+  width: 358px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: $footer-backgorund-color;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  font-size: 16px;
+  line-height: 1.25;
+  color: inherit;
+}
+.subscribe-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.subscribe-button {
+  display: flex;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.87;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  background-color: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.subscribe-icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
