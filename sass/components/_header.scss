@@ -11,7 +11,7 @@
   align-items: center;
   margin-right: auto;
 }
-/* логотип */
+/* логотип отступ*/
 .header__logo {
   margin-right: 93px;
 }
@@ -60,6 +60,6 @@
   color: $main-text-color;
 }
 .header__icon {
-  fill: currentColor;
+  @extend .icon;
   margin-right: 10px;
 }

@@ -1,4 +1,4 @@
-/* Модальное окно */
+// Бэкдроп
 .backdrop {
   position: fixed;
   top: 0;
@@ -9,16 +9,15 @@
   margin-left: auto;
   margin-right: auto;
   background-color: rgba(0, 0, 0, 0.2);
-}
-/* прячет модальное окно */
-.backdrop.is-hidden {
-  pointer-events: none;
-  opacity: 0;
-}
-.backdrop {
   opacity: 1;
   transition: opacity 250ms $animation-cubic;
+  /* прячет модальное окно */
+  &.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+  }
 }
+/* Модальное окно */
 .modal {
   position: absolute;
   top: 50%;
@@ -69,6 +68,7 @@
   }
 }
 .modal__icon {
+  @extend .icon;
   position: absolute;
   top: 50%;
   left: 0;
@@ -76,7 +76,6 @@
   width: 18px;
   height: 18px;
   color: $secondary-text-color;
-  fill: currentColor;
   transition: color 250ms $animation-cubic;
 }
 .modal__textarea {
@@ -100,64 +99,12 @@
 .modal__input:not(:placeholder-shown) + .modal__icon {
   color: $accent-color;
 }
+
 /* Принять условия */
-.accept__item {
-  margin-top: 20px;
-  padding-left: 14px;
-  display: flex;
-  align-items: center;
-}
-.accept__checkbox {
-  position: relative;
-  margin-right: 7px;
-  width: 16px;
-  height: 15px;
-  border: 2px solid $secondary-text-color;
-  border-radius: 2px;
-  color: $hero-text-color;
-  pointer-events: none;
-  transition: border-color 250ms $animation-cubic, background-color 250ms $animation-cubic;
-}
-.accept__icon {
-  position: absolute;
-  left: -20%;
-  top: -25%;
-  width: 16px;
-  height: 15px;
-  fill: currentColor;
-  opacity: 0;
-  transition: opacity 250ms $animation-cubic;
-}
-.accept__link {
-  color: $accent-color;
-}
-.accept__input:checked + .accept__checkbox {
-  background-color: $accent-color;
-  border-color: $accent-color;
-  & > .accept__icon {
-    opacity: 1;
-  }
-}
-/* кнопка Отправить */
-.modal__accept {
-  display: block;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  padding: 10px 55px 10px 56px;
-  color: $hero-text-color;
-  background-color: $accent-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms $animation-cubic;
-  &:hover {
-    background-color: $hero-button-hover-color;
-  }
-}
+@import './accept';
+
 /* кнопка закрытия */
-.modal__button {
+.modal__close {
   position: absolute;
   left: calc(100% - 8px);
   top: 8px;
@@ -173,7 +120,4 @@
   &:hover {
     color: $accent-color;
   }
-}
-.modal__close {
-  fill: currentColor;
 }

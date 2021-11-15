@@ -74,6 +74,10 @@
   display: flex;
 }
 
+.icon, .header__icon, .modal__icon, .accept__icon, .social__icon, .clients__icon, .subscribe__icon {
+  fill: currentColor;
+}
+
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -374,7 +378,7 @@ p {
   margin-right: auto;
 }
 
-/* логотип */
+/* логотип отступ*/
 .header__logo {
   margin-right: 93px;
 }
@@ -437,7 +441,6 @@ p {
 }
 
 .header__icon {
-  fill: currentColor;
   margin-right: 10px;
 }
 
@@ -506,7 +509,6 @@ p {
   background-color: #188ce8;
 }
 
-/* Модальное окно */
 .backdrop {
   position: fixed;
   top: 0;
@@ -517,20 +519,18 @@ p {
   margin-left: auto;
   margin-right: auto;
   background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* прячет модальное окно */
 }
 
-/* прячет модальное окно */
 .backdrop.is-hidden {
   pointer-events: none;
   opacity: 0;
 }
 
-.backdrop {
-  opacity: 1;
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
+/* Модальное окно */
 .modal {
   position: absolute;
   top: 50%;
@@ -600,7 +600,6 @@ p {
   width: 18px;
   height: 18px;
   color: #212121;
-  fill: currentColor;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -673,7 +672,6 @@ p {
   top: -25%;
   width: 16px;
   height: 15px;
-  fill: currentColor;
   opacity: 0;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -715,7 +713,7 @@ p {
 }
 
 /* кнопка закрытия */
-.modal__button {
+.modal__close {
   position: absolute;
   left: calc(100% - 8px);
   top: 8px;
@@ -732,12 +730,8 @@ p {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal__button:hover {
+.modal__close:hover {
   color: #2196f3;
-}
-
-.modal__close {
-  fill: currentColor;
 }
 
 /* стили особенностей */
@@ -952,7 +946,6 @@ p {
 .social__icon {
   width: 20px;
   height: 20px;
-  fill: currentColor;
 }
 
 /* постоянные клиенты */
@@ -995,46 +988,9 @@ p {
 .clients__icon {
   width: 106px;
   height: 60px;
-  fill: currentColor;
 }
 
 /* стили футера */
-.footer {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 60px 0;
-  background-color: #2f303a;
-}
-
-.footer__text {
-  color: #ffffff;
-  font-style: normal;
-}
-
-.address {
-  margin-top: 20px;
-}
-
-.footer__link {
-  margin-top: 9px;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer__link:hover, .footer__link:focus {
-  color: #2196f3;
-}
-
-.footer__title {
-  margin-bottom: 20px;
-  font-size: inherit;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
 /* секция присоединяйтесь */
 .join {
   margin-left: 70px;
@@ -1119,7 +1075,42 @@ p {
   margin-left: 10px;
   width: 24px;
   height: 24px;
-  fill: currentColor;
+}
+
+.footer {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 0;
+  background-color: #2f303a;
+}
+
+.footer__text {
+  color: #ffffff;
+  font-style: normal;
+}
+
+.footer__address {
+  margin-top: 20px;
+}
+
+.footer__link {
+  margin-top: 9px;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__link:hover, .footer__link:focus {
+  color: #2196f3;
+}
+
+.footer__title {
+  margin-bottom: 20px;
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 
 /* фильтр */
