@@ -6,22 +6,28 @@
   padding: 60px 0;
   background-color: $footer-backgorund-color;
 }
-.footer-text {
+.footer__text {
   color: $hero-text-color;
   font-style: normal;
 }
 .address {
   margin-top: 20px;
 }
-.footer-link {
+.footer__link {
   margin-top: 9px;
   color: $footer-link-color;
   font-style: normal;
   transition: color 250ms $animation-cubic;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
-.footer-link:hover,
-.footer-link:focus {
-  color: $accent-color;
+.footer__title {
+  margin-bottom: 20px;
+  font-size: inherit;
+  line-height: 1.14;
+  text-transform: uppercase;
 }
 /* секция присоединяйтесь */
 .join {
@@ -30,13 +36,7 @@
   padding-top: 12px;
   color: $hero-text-color;
 }
-.footer-title {
-  margin-bottom: 20px;
-  font-size: inherit;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-.join-item {
+.join__item {
   color: $hero-text-color;
   background-color: rgba(255, 255, 255, 0.1);
 }
@@ -46,10 +46,10 @@
   width: 570px;
   color: $hero-text-color;
 }
-.subscribe-form {
+.subscribe__form {
   display: flex;
 }
-.subscribe-input {
+.subscribe__input {
   margin-right: 12px;
   width: 358px;
   padding-left: 16px;
@@ -62,11 +62,11 @@
   font-size: 16px;
   line-height: 1.25;
   color: inherit;
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
-.subscribe-input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
-}
-.subscribe-button {
+.subscribe__button {
   display: flex;
   width: 200px;
   padding-top: 10px;
@@ -80,7 +80,7 @@
   background-color: $accent-color;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.subscribe-icon {
+.subscribe__icon {
   margin-left: 10px;
   width: 24px;
   height: 24px;

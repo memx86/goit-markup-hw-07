@@ -15,7 +15,7 @@
   color: $hero-text-color;
   text-align: center;
 }
-.hero-title {
+.hero__title {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -25,7 +25,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.hero-button {
+.hero__button {
   /* у самой кнопки с классом .button граница 1 px */
   padding-left: 31px;
   padding-right: 31px;
@@ -41,8 +41,8 @@
   background-color: $accent-color;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   transition: color 250ms $animation-cubic;
-}
-.hero-button:hover,
-.hero-button:focus {
-  background-color: $hero-button-hover-color;
+  &:hover,
+  &:focus {
+    background-color: $hero-button-hover-color;
+  }
 }

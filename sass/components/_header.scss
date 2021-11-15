@@ -6,58 +6,60 @@
   background-color: $secondary-background-color;
   border-bottom: 1px solid #ececec;
 }
-.header-nav {
+.header__nav {
   display: flex;
   align-items: center;
   margin-right: auto;
 }
 /* логотип */
-.header-logo {
+.header__logo {
   margin-right: 93px;
 }
-/* выделение текущей страницы в навигации */
-.header-link.header-link--current {
-  position: relative;
-  color: $accent-color;
-}
-.header-link--current::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -1px;
-  width: 100%;
-  height: 4px;
-  background-color: $accent-color;
-  border-radius: 2px;
-}
-.header-list {
+.header__list {
   display: flex;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   align-items: center;
 }
-.header-item:not(:last-child) {
-  margin-right: 50px;
+.header__item {
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
 }
-.header-link {
+.header__link {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   color: $secondary-text-color;
   transition: color 250ms $animation-cubic;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
-.header-link:hover,
-.header-link:focus {
+/* выделение текущей страницы в навигации */
+.header__link--current {
+  position: relative;
   color: $accent-color;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    border-radius: 2px;
+  }
 }
 /* иконки в контактах */
-.header-link--contacts {
+.header__link--contacts {
   display: inline-flex;
   align-items: center;
   color: $main-text-color;
 }
-.header-icon {
+.header__icon {
   fill: currentColor;
   margin-right: 10px;
 }
