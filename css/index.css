@@ -429,7 +429,7 @@ p {
   border-radius: 2px;
 }
 
-/* иконки в контактах */
+/* Контакты */
 .header__link--contacts {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
