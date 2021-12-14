@@ -37,21 +37,6 @@
 }
 /* кнопка Отправить */
 .modal__accept {
-  display: block;
+  @extend %button;
   margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  padding: 10px 55px 10px 56px;
-  color: $hero-text-color;
-  background-color: $accent-color;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms $animation-cubic;
-  &:hover,
-  &:focus {
-    background-color: $hero-button-hover-color;
-    outline: none;
-  }
 }

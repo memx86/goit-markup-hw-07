@@ -12,7 +12,6 @@
   }
 }
 .filter__button {
-  /* у самой кнопки с классом .button граница 1 px */
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 21px;
@@ -22,7 +21,8 @@
   font-size: 16px;
   line-height: 1.6;
   letter-spacing: 0.03em;
-  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
   color: $secondary-text-color;
   background-color: $team-background-color;
   transition: color 250ms $animation-cubic, background-color 250ms $animation-cubic,
