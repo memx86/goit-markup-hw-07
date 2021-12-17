@@ -1,7 +1,10 @@
 :root {
-  /* для карточек */
+  //   для карточек
   --column-number: 3;
   --gap-size: 30px;
+  //   для скролла
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
 }
 /* основной цвет текста #757575 */
 $main-text-color: #757575;
