@@ -1,4 +1,11 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+:root {
+  /* для карточек */
+  --column-number: 3;
+  --gap-size: 30px;
+}
+
 /* основной цвет текста #757575 */
 /* вторичный цвет текста #212121 */
 /* акцент #2196F3 */
@@ -13,7 +20,6 @@
 /* цвет ссылок в футере */
 /* функция распределения времени для анимаций */
 /* убирает точки и левый отступ у списков*/
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
 .list {
   list-style: none;
   padding: 0;
@@ -368,12 +374,6 @@ Add the correct display in Chrome and Safari.
 */
 summary {
   display: list-item;
-}
-
-:root {
-  /* для карточек */
-  --column-number: 3;
-  --gap-size: 30px;
 }
 
 body {
